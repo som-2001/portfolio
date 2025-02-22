@@ -1,0 +1,112 @@
+import { Container, Grid, Typography, Box, Avatar, Chip } from "@mui/material";
+import { GitHub, Twitter } from "@mui/icons-material";
+
+export const About = () => {
+  return (
+    <Box
+      sx={{
+        paddingTop:"22px",
+        backgroundColor: "#0A0E12",
+        color: "white",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "10px 20px 50px 20px",
+      }}
+    >
+      <Container maxWidth="lg">
+        <Grid container spacing={4} alignItems="center">
+          {/* Left Section - Image */}
+          <Grid item xs={12} md={5} display="flex" justifyContent="center">
+            <Box sx={{ position: "relative" }}>
+              <Avatar
+                src="../images/my_image.jpeg"
+                alt="profile"
+                sx={{
+                  display:{xs:"none",sm:"block"},  
+                  width: 250,
+                  height: 320,
+                  borderRadius: 2,
+                  boxShadow: "20px 20px 0px rgb(48, 48, 91)",
+                }}
+              />
+            </Box>
+          </Grid>
+
+          {/* Right Section - Text */}
+          <Grid item xs={12} md={7}>
+            <Chip
+              label="About me"
+              variant="outlined"
+              sx={{ color: "gray", mb: 2 }}
+            />
+            <Typography variant="h4" fontWeight="bold">
+              Curious about me? Here you have it:
+            </Typography>
+
+            <Typography variant="body1" color="gray" mt={2}>
+              I am a passionate,{" "}
+              <span style={{ color: "rgb(107, 169, 169)" }}>
+                self-proclaimed designer
+              </span>{" "}
+              who specializes in full-stack development (
+              <span style={{ color: "rgb(107, 169, 169)" }}>
+                React.js & Node.js
+              </span>
+              ). I love bringing technical and visual aspects of digital
+              products to life.
+            </Typography>
+
+            <Typography variant="body1" color="gray" mt={2}>
+              I started my journey in 2015 and have grown into a progressive
+              thinker, building modern web apps with{" "}
+              <span style={{ color: "rgb(107, 169, 169)" }}>
+                Next.js, TypeScript, NestJS, TailwindCSS, and Supabase
+              </span>
+              .
+            </Typography>
+
+            <Typography variant="body1" color="gray" mt={2}>
+              When I am not coding, you can find me exploring the latest tech
+              trends on <Twitter sx={{ fontSize: 18 }} /> Twitter or sharing
+              open-source projects on <GitHub sx={{ fontSize: 18 }} /> GitHub.
+            </Typography>
+
+            {/* Quick Facts */}
+            <Box mt={3}>
+              <Typography
+                variant="body2"
+                sx={{ color: "white", fontWeight: "bold" }}
+              >
+                • B.Tech. in Computer Engineering
+              </Typography>
+              <Typography
+                variant="body2"
+                sx={{ color: "white", fontWeight: "bold" }}
+              >
+                • Software Developer
+              </Typography>
+              <Typography
+                variant="body2"
+                sx={{ color: "white", fontWeight: "bold" }}
+              >
+                • Avid learner
+              </Typography>
+              <Typography
+                variant="body2"
+                sx={{ color: "white", fontWeight: "bold" }}
+              >
+                • Aspiring indie hacker
+              </Typography>
+            </Box>
+
+            <Typography variant="body1" color="gray" mt={2}>
+              I am available for freelance work, so feel free to reach out!
+            </Typography>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
+  );
+};
+
