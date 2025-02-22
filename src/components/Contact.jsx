@@ -15,14 +15,14 @@ export const Contact = () => {
 
     emailjs
       .send(
-        "YOUR_SERVICE_ID", // Replace with your EmailJS Service ID
-        "YOUR_TEMPLATE_ID", // Replace with your EmailJS Template ID
+        "service_sayts6g", // Replace with your EmailJS Service ID
+        "template_4sih2nn", // Replace with your EmailJS Template ID
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
         },
-        "YOUR_PUBLIC_KEY" // Replace with your EmailJS Public Key
+        "AbJYcxmMTW-bNBT3N" // Replace with your EmailJS Public Key
       )
       .then(() => {
         setIsSent(true);
