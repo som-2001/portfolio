@@ -1,4 +1,4 @@
-import { Container, Grid, Typography, Box, Avatar, Chip } from "@mui/material";
+import { Container, Typography, Box, Avatar, Chip, Grid2 } from "@mui/material";
 import { GitHub, Twitter } from "@mui/icons-material";
 
 export const About = () => {
@@ -15,9 +15,9 @@ export const About = () => {
       }}
     >
       <Container maxWidth="lg">
-        <Grid container spacing={4} alignItems="center">
+        <Grid2 container spacing={4} alignItems="center">
           {/* Left Section - Image */}
-          <Grid item xs={12} md={5} display="flex" justifyContent="center">
+          <Grid2 size={{xs:12, md:5}} display="flex" justifyContent="center">
             <Box sx={{ position: "relative" }}>
               <Avatar
                 src="../images/my_image.jpeg"
@@ -31,10 +31,10 @@ export const About = () => {
                 }}
               />
             </Box>
-          </Grid>
+          </Grid2>
 
           {/* Right Section - Text */}
-          <Grid item xs={12} md={7}>
+          <Grid2 size={{xs:12, md:7}}>
             <Chip
               label="About me"
               variant="outlined"
@@ -103,8 +103,8 @@ export const About = () => {
             <Typography variant="body1" color="gray" mt={2}>
               I am available for freelance work, so feel free to reach out!
             </Typography>
-          </Grid>
-        </Grid>
+          </Grid2>
+        </Grid2>
       </Container>
     </Box>
   );

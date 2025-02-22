@@ -1,6 +1,6 @@
 import {
   Container,
-  Grid,
+  Grid2,
   Typography,
   Box,
   Chip,
@@ -84,9 +84,9 @@ export const Projects = () => {
           Some of the noteworthy projects I have built:
         </Typography>
 
-        <Grid container spacing={3} justifyContent="center">
+        <Grid2 container spacing={3} justifyContent="center">
           {projects.map((project, index) => (
-            <Grid item xs={12} key={index}>
+            <Grid2 size={{xs:12}} key={index}>
               <Card
                 onClick={()=>handleNavigate(project)}
                 sx={{
@@ -128,9 +128,9 @@ export const Projects = () => {
                   </Box>
                 </CardContent>
               </Card>
-            </Grid>
+            </Grid2>
           ))}
-        </Grid>
+        </Grid2>
       </Container>
     </Box>
   );
