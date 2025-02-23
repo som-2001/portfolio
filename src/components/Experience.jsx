@@ -1,4 +1,12 @@
-import { Container, Grid, Typography, Box, Chip, Card, CardContent } from "@mui/material";
+import {
+  Container,
+  Grid,
+  Typography,
+  Box,
+  Chip,
+  Card,
+  CardContent,
+} from "@mui/material";
 
 const experiences = [
   {
@@ -6,10 +14,9 @@ const experiences = [
     role: "Fresher web Developer",
     period: "Nov 2024 - Present",
     responsibilities: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Ut pretium arcu et massa semper, id fringilla leo semper.",
-      "Sed quis justo ac magna.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Developed and optimized user interfaces using React.js to enhance user experience.",
+      "Integrated APIs and handled state management with Redux for seamless data flow.",
+      "Collaborated with a team to implement new features and fix bugs in existing applications.",
     ],
   },
   {
@@ -17,19 +24,30 @@ const experiences = [
     role: "React Developer",
     period: "May 2024 - Nov 2024",
     responsibilities: [
-      "Sed quis justo ac magna.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Sed quis justo ac magna.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Developed and optimized user interfaces using React.js to enhance user experience.",
+      "Integrated APIs and handled state management with Redux for seamless data flow.",
+      "Collaborated with a team to implement new features and fix bugs in existing applications.",
+      "Gained hands-on experience with Material-UI (MUI) to create responsive and visually appealing components.",
     ],
   },
 ];
 
 export const Experience = () => {
   return (
-    <Box sx={{ backgroundColor: "#0A0E12", color: "white", py: 6, textAlign: "center" }}>
+    <Box
+      sx={{
+        backgroundColor: "#0A0E12",
+        color: "white",
+        py: 6,
+        textAlign: "center",
+      }}
+    >
       <Container maxWidth="md">
-        <Chip label="Experience" variant="outlined" sx={{ color: "gray", mb: 2 }} />
+        <Chip
+          label="Experience"
+          variant="outlined"
+          sx={{ color: "gray", mb: 2 }}
+        />
         <Typography variant="h5" fontWeight="bold" mb={3}>
           Here is a quick summary of my most recent experiences:
         </Typography>
@@ -46,10 +64,17 @@ export const Experience = () => {
                 }}
               >
                 <CardContent>
-                  <Typography variant="h6" sx={{ color: "#69db7c", fontWeight: "bold" }}>
+                  <Typography
+                    variant="h6"
+                    sx={{ color: "#69db7c", fontWeight: "bold" }}
+                  >
                     {exp.company}
                   </Typography>
-                  <Box display="flex" justifyContent="space-between" alignItems="center">
+                  <Box
+                    display="flex"
+                    justifyContent="space-between"
+                    alignItems="center"
+                  >
                     <Typography variant="h6" fontWeight="bold">
                       {exp.role}
                     </Typography>
@@ -57,7 +82,13 @@ export const Experience = () => {
                       {exp.period}
                     </Typography>
                   </Box>
-                  <ul style={{ textAlign: "left", marginTop: "10px", paddingLeft: "20px" }}>
+                  <ul
+                    style={{
+                      textAlign: "left",
+                      marginTop: "10px",
+                      paddingLeft: "20px",
+                    }}
+                  >
                     {exp.responsibilities.map((task, i) => (
                       <li key={i} style={{ marginBottom: "5px" }}>
                         <Typography variant="body2">{task}</Typography>
@@ -73,4 +104,3 @@ export const Experience = () => {
     </Box>
   );
 };
-

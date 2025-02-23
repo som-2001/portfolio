@@ -1,5 +1,5 @@
 import { Container, Typography, Box, Avatar, Chip, Grid2 } from "@mui/material";
-import { GitHub, Twitter } from "@mui/icons-material";
+import { GitHub, Twitter, YouTube } from "@mui/icons-material";
 
 export const About = () => {
   return (
@@ -58,17 +58,17 @@ export const About = () => {
             </Typography>
 
             <Typography variant="body1" color="gray" mt={2}>
-              I started my journey in 2015 and have grown into a progressive
+              I started my journey in 2022 and have grown into a progressive
               thinker, building modern web apps with{" "}
               <span style={{ color: "rgb(107, 169, 169)" }}>
-                Next.js, TypeScript, NestJS, TailwindCSS, and Supabase
+                React, Express, Node, Mui, MongoDB, Git, Nginx, Socket.io
               </span>
               .
             </Typography>
 
             <Typography variant="body1" color="gray" mt={2}>
               When I am not coding, you can find me exploring the latest tech
-              trends on <Twitter sx={{ fontSize: 18 }} /> Twitter or sharing
+              trends on <YouTube sx={{ fontSize: 18 }} /> youtube or sharing
               open-source projects on <GitHub sx={{ fontSize: 18 }} /> GitHub.
             </Typography>
 

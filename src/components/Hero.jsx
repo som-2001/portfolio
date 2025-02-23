@@ -1,7 +1,10 @@
 import { Container, Grid, Typography, Box, Avatar, Stack } from "@mui/material";
-import { LocationOn, GitHub, LinkedIn,YouTube } from "@mui/icons-material";
+import { LocationOn, GitHub, LinkedIn, YouTube } from "@mui/icons-material";
 
 export const Hero = () => {
+  const handleNavigate = (link) => {
+    window.location.href = link;
+  };
   return (
     <Box
       sx={{
@@ -11,7 +14,7 @@ export const Hero = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        padding:"40px 20px"
+        padding: "40px 20px",
       }}
     >
       <Container maxWidth="lg">
@@ -38,7 +41,7 @@ export const Hero = () => {
             {/* Location */}
             <Stack direction="row" alignItems="center" spacing={1} mt={3}>
               <LocationOn sx={{ color: "rgb(107, 169, 169)" }} />
-              <Typography color="white">Bankura, India</Typography>
+              <Typography color="white">Bankura, West Bengal, India</Typography>
             </Stack>
 
             {/* Availability */}
@@ -58,12 +61,21 @@ export const Hero = () => {
             <Stack direction="row" spacing={2} mt={3}>
               <GitHub
                 sx={{ color: "white", fontSize: 30, cursor: "pointer" }}
+                onClick={() => handleNavigate("https://github.com/som-2001/")}
               />
               <YouTube
                 sx={{ color: "white", fontSize: 30, cursor: "pointer" }}
+                onClick={() =>
+                  handleNavigate("https://www.youtube.com/@somgorai4608/videos")
+                }
               />
               <LinkedIn
                 sx={{ color: "white", fontSize: 30, cursor: "pointer" }}
+                onClick={() =>
+                  handleNavigate(
+                    "https://www.linkedin.com/in/som-gorai-3a12582b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                  )
+                }
               />
             </Stack>
           </Grid>
